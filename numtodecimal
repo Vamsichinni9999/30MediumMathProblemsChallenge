@@ -1,0 +1,16 @@
+class Solution:
+    def toHex(self, num: int) -> str:
+        if num==0:
+            return 0
+        if num<0:
+            num=num+2**32
+        r=""
+        h="0123456789abcdef"
+        while num>0:
+            k=num%16
+            r=h[k]+r
+            num=num//16
+        return r
+          
+
+        
